@@ -15,8 +15,8 @@ public class BbsDAO {
 	public BbsDAO() {
 		try {
 			String dbURL = "jdbc:mysql://localhost:3307/BBS?serverTimezone=UTC";
-			String dbID = "root";
-			String dbPassword = "0202";
+			String dbID = "yourID";
+			String dbPassword = "yourPassword";
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
 		} catch (Exception e) {
@@ -35,7 +35,7 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return ""; // µ¥ÀÌÅÍº£ÀÌ½º ¿À·ù 
+		return ""; // ë°ì´í„°ë² ì´ìŠ¤ ì˜¤ë¥˜ 
 	}
 	
 	public int getNext() {
@@ -46,11 +46,11 @@ public class BbsDAO {
 			if (rs.next()) {
 				return rs.getInt(1) + 1;
 			}
-			return 1; // Ã¹ ¹øÂ° °Ô½Ã¹°ÀÎ °æ¿ì
+			return 1; // ì²« ë²ˆì§¸ ê²Œì‹œë¬¼ì¸ ê²½ìš°
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; // µ¥ÀÌÅÍº£ÀÌ½º ¿À·ù 
+		return -1; // ë°ì´í„°ë² ì´ìŠ¤ ì˜¤ë¥˜ 
 	}
 	
 	public int write(String bbsTitle, String userID, String bbsContent) {
@@ -67,7 +67,7 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; // µ¥ÀÌÅÍº£ÀÌ½º ¿À·ù 
+		return -1; // ë°ì´í„°ë² ì´ìŠ¤ ì˜¤ë¥˜ 
 	}
 	
 	public ArrayList<Bbs> getList(int pageNumber) {
@@ -141,7 +141,7 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; // µ¥ÀÌÅÍº£ÀÌ½º ¿À·ù 
+		return -1; // ë°ì´í„°ë² ì´ìŠ¤ ì˜¤ë¥˜ 
 	}
 	
 	public int delete(int bbsID) {
@@ -153,6 +153,6 @@ public class BbsDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -1; // µ¥ÀÌÅÍº£ÀÌ½º ¿À·ù 
+		return -1; // ë°ì´í„°ë² ì´ìŠ¤ ì˜¤ë¥˜ 
 	}
 }
