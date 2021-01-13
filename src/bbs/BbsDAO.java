@@ -14,7 +14,7 @@ public class BbsDAO {
 	
 	public BbsDAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3307/BBS?serverTimezone=UTC";
+			String dbURL = "jdbc:mysql://localhost:3307/BBS?serverTimezone=UTC"; // 설정 시 3307 포트번호로 설정함.
 			String dbID = "yourID";
 			String dbPassword = "yourPassword";
 			Class.forName("com.mysql.jdbc.Driver");
